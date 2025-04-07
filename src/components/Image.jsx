@@ -1,15 +1,21 @@
 import { IKImage } from 'imagekitio-react'
 import React from 'react'
 
-const Image = ({src , className}) => {
+const Image = ({src , className , w , h , alt} ) => {
   return (
     <IKImage  
-    urlEndpoint={import.meta.env.VITE_IMAGEKIT_URL}
+    urlEndpoint={import.meta.env.VITE_Ik_URL_ENDPOINT}
     path={src}
-    alt="" 
+    loading='lazy'
+    lqip={{ active: true, quality: 20 }}
+    alt={alt}
     className={className}
+    width={w}
+    height={h}
      />
   )
 }
 
 export default Image
+
+

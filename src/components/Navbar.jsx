@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IKImage } from 'imagekitio-react';
+import Image from "./Image";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -10,6 +10,15 @@ const Navbar = () => {
 
       <div className="flex items-center gap-4 text-2xl font-bold">
 
+
+        <Image
+        src={"/logo.png"}
+        alt={"sadokdev logo"}
+        w={32}
+
+        h={32}
+        
+        />
         <span>SadokDEV </span>
       </div>
 
